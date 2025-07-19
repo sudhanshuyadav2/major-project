@@ -1,0 +1,67 @@
+<% layout('layouts/boilerplate') -%>
+<h3 class="offset-2">Add new listings</h3 >
+ <div class="col-8 offset-2">
+  <div class="mb3">
+    <form action="/listing" method="post"class="needs-validation" novalidate enctype="multipart/form-data">
+   
+  <div class="mb3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" 
+    name="listing[title]" placeholder="add title"
+    
+       required>
+   <DIV class="valid-feedback"> looks good</DIV>
+  </div>
+  <div class="mb3">
+    <label for="description" class="form-label">Description</label>
+    <textarea class="form-control" name="listing[description]"
+     placeholder="write description"     required></textarea>
+      <DIV class="invalid-feedback"> please inter corect description</DIV>
+  </div>
+    <div class="mb-3">
+    <label for="image" class="form-label">Upload Image</label>
+    <input type="file" class="form-control" name="listing[image]" 
+    id="image">
+  </div>
+  
+  <div class="mb3">
+    <label for="location" class="form-label">Location</label>
+    <input type="text" class="form-control" name="listing[location]"
+     placeholder="add location"     required>
+      <DIV class="invalid-feedback"> please enter correct location</DIV>
+  </div>
+  <div class="row">
+<div class="mb3 col-sm-4">
+    <label for="price" class="form-label">Price</label>
+    <input type="text" class="form-control" name="listing[price]" 
+    placeholder="add price"     required>
+    <DIV class="invalid-feedback"> please enter a valid price</DIV>
+  </div>
+  <div class="mb3 col-sm-8">
+    <label for="country" class="form-label">Country</label>
+    <input type="text" class="form-control" name="listing[country]"
+     placeholder="add country"     required>
+      <DIV class="invalid-feedback"> pleae enter valid country</DIV>
+  </div>
+  </div>
+     <div class="mb-3">
+  <label for="categorySelect" class="form-label">Category</label>
+  <select class="form-select" id="categorySelect" name="listing[category]" required>
+    <option value="">Select a category</option>
+    <option value="Trending">Trending</option>
+    <option value="Castle">Castle</option>
+    <option value="Mountains">Mountains</option>
+    <option value="Iconic City">Iconic City</option>
+    <option value="Amazing Pools">Amazing Pools</option>
+    <option value="Farms">Farms</option>
+    <option value="Snow Flake">Snow Flake</option>
+    <option value="Eye Slash">Eye Slash</option>
+  </select>
+</div>
+   <br><br>
+    
+   <button class="btn btn-dark show" >add</button>
+     
+    </form>   
+   </div>
+   </div> 

@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-sm bg-body-light border-bottom border-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i class="fa-regular fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listing">Explore</a>
+
+
+       </div>
+        <div class="navbar-nav ms-auto">
+         <form class="d-flex" action="/listing/search" method="GET" role="search">
+             <input
+              class="form-control me-2 searchstyle"
+               type="search"
+                name="q"
+                 placeholder="Search listings..."
+                 aria-label="Search"
+               required
+               />
+             <button class="btn btn-outline search-btn" type="submit">Search</button>
+          </form>
+       </div>  
+      <div class="navbar-nav ms-auto" >
+          <a class="nav-link" href="/listing/new">Airbnb our home</a>
+     <% if(!currentUser){ %>
+        <a class="nav-link " aria-current="page" href="/signup">   <b> signup </b> </a>
+        <a class="nav-link" href="/login"><b>login</b></a>
+      <%} %>
+        <%if(currentUser){ %>
+       <a class="nav-link" href="/logout">logout</a>
+       <%}%>
+      </div>
+    </div>
+</nav>
+
+
+
+<style>
+.searchstyle{
+border-radius: 25px;
+padding:0 2rem 0 2rem ;
+}
+.search-btn{
+border-radius: 25px;
+background-color: #f40717 ;
+color: black;
+padding:5px 2rem 5px 2rem ;
+}
+.search-btn:hover{
+
+background-color: #80121a ;
+
+}
+
+
+
+</style>
+
+
