@@ -90,6 +90,7 @@ app.use((req, res, next) => {
 });
 
 
+
 //  THEN Mount your routers
 app.use("/listing", listingRouter);
 app.use("/listing/:id/reviews", reviewsrouter);
@@ -100,7 +101,8 @@ app.use("/", userouter);
 
 
 app.all(/.*/, (req, res, next) => {
-  next(new expresserr(404, "err was send from route"));
+   res.redirect('/listing');
+  
 });
 
 
